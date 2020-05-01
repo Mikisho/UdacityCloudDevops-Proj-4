@@ -50,7 +50,6 @@ version 0.20.2. This might lead to breaking code or invalid results. Use at your
 172.17.0.1 - - [01/May/2020 04:36:50] "GET / HTTP/1.1" 200 -
 172.17.0.1 - - [01/May/2020 04:36:51] "GET /favicon.ico HTTP/1.1" 404 -
 172.17.0.1 - - [01/May/2020 04:37:18] "GET / HTTP/1.1" 200 -
-172.17.0.1 - - [01/May/2020 04:38:18] "GET /predict HTTP/1.1" 405 -
 172.17.0.1 - - [01/May/2020 04:38:53] "GET / HTTP/1.1" 200 -
 172.17.0.1 - - [01/May/2020 04:51:23] "GET / HTTP/1.1" 200 -
 [2020-05-01 04:55:41,746] INFO in app: JSON payload: 
