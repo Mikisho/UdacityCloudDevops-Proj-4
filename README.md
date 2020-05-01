@@ -1,5 +1,4 @@
-[![Mikisho](https://circleci.com/gh/Mikisho/UdacityCloudDevops-Proj-4.svg?style=svg)]
-(https://circleci.com/gh/Mikisho/UdacityCloudDevops-Proj-4)
+![Mikisho](https://circleci.com/gh/Mikisho/UdacityCloudDevops-Proj-4.svg?style=svg)
 
 # Operationalize a Machine Learning Microservice API
 
