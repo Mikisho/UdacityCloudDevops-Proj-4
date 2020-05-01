@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="H:\Udacity_CloudND\Proj-4\project-ml-microservice-kubernetes\devops"
+VIRTUAL_ENV="H:\Udacity_CloudND\UdacityCloudDevops-Proj-4\devops"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
