@@ -1,0 +1,18 @@
+$ bash run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create 
+instead.
+Error from server (AlreadyExists): deployments.apps "udevopsproj4" already exists
+NAME                             READY   STATUS    RESTARTS   AGE  
+app-79989f676b-kn4vm             1/1     Running   0          3m13s
+devopsproj-6d799894d8-849rn      1/1     Running   0          3m13s
+udevopsproj4-7fb5d97456-qf49f    1/1     Running   0          72s  
+udevopsproje4-7f9bc94df6-glwx9   1/1     Running   0          3m13s
+Forwarding from 127.0.0.1:8001 -> 80
+Forwarding from [::1]:8001 -> 80
+Handling connection for 8001
+Port: 8001
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}

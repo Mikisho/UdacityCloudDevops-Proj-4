@@ -1,0 +1,64 @@
+Sending build context to Docker daemon  23.19MB
+Step 1/8 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/8 : WORKDIR /app
+ ---> Using cache
+ ---> 6f2fbeeeebd2
+Step 3/8 : COPY app.py /app
+ ---> Using cache
+ ---> 04fdf2edf27f
+Step 4/8 : COPY requirements.txt /app/
+ ---> Using cache
+ ---> ecdc20b086d6
+Step 5/8 : COPY model_data/boston_housing_prediction.joblib /app/model_data/
+ ---> Using cache
+ ---> 268c4c93f673
+Step 6/8 : RUN pip install --upgrade pip &&    pip install --trusted-host pypi.python.org -r requirements.txt
+ ---> Using cache
+ ---> acbf07ad40b7
+Step 7/8 : EXPOSE 80
+ ---> Using cache
+ ---> fbff177f0b6f
+Step 8/8 : CMD ["python", "app.py"]
+ ---> Using cache
+ ---> 45e23d0b852d
+Successfully built 45e23d0b852d
+Successfully tagged udevopsproj4:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+udevopsproj4        latest              45e23d0b852d        15 minutes ago      1.26GB
+python              3.7.3-stretch       34a518642c76        10 months ago       929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+/usr/local/lib/python3.7/site-packages/sklearn/base.py:251: UserWarning: Trying to unpickle estimator DecisionTreeRegressor from version 0.20.3 when using 
+version 0.20.2. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.7/site-packages/sklearn/base.py:251: UserWarning: Trying to unpickle estimator GradientBoostingRegressor from version 0.20.3 when using version 0.20.2. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+/usr/local/lib/python3.7/site-packages/sklearn/base.py:251: UserWarning: Trying to unpickle estimator DecisionTreeRegressor from version 0.20.3 when using 
+version 0.20.2. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+/usr/local/lib/python3.7/site-packages/sklearn/base.py:251: UserWarning: Trying to unpickle estimator GradientBoostingRegressor from version 0.20.3 when using version 0.20.2. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+ * Debugger is active!
+ * Debugger PIN: 101-751-207
+172.17.0.1 - - [01/May/2020 04:36:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [01/May/2020 04:36:51] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [01/May/2020 04:37:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [01/May/2020 04:38:18] "GET /predict HTTP/1.1" 405 -
+172.17.0.1 - - [01/May/2020 04:38:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [01/May/2020 04:51:23] "GET / HTTP/1.1" 200 -
+[2020-05-01 04:55:41,746] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-05-01 04:55:41,800] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-05-01 04:55:41,836] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+172.17.0.1 - - [01/May/2020 04:55:41] "POST /predict HTTP/1.1" 200 -
