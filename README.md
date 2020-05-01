@@ -44,3 +44,19 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+--
+## Project files description
+
+* __.circleci/config.yml:__ CircleCI integration file
+* __devops:__ Venv environment set up script file
+* __model_data:__ predection model 
+* __output_txt_files:__ Docker container and Kubernetes out put log files
+* __app.py:__ Flask API python code
+* __Dockerfile:__ Docker container setup file
+* __make_prediction.sh:__ Bash script to make API call and generate predction
+* __Makefile:__ Make file to install the necessary dependencies
+* __requirements.txt:__ package to install all dependancy application for the API
+* __run_docker.sh:__ Bash script used to run API docker container
+* __run_kubernetes.sh:__ Bash script to set up kubernetes deployment
+* __upload_docker.sh:__ Bash script to push docker image to DockerHub
